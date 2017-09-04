@@ -1,3 +1,6 @@
+[submodule "aircrack-ng"]
+	path = aircrack-ng
+	url = https://github.com/ralic/aircrack-ng
 [submodule "collectd"]
 path=collectd
 url = https://github.com/ralic/collectd
