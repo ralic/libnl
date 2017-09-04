@@ -16,9 +16,9 @@
 #if __BYTE_ORDER == __BIG_ENDIAN
 #define ntohll(x) (x)
 #elif __BYTE_ORDER == __LITTLE_ENDIAN
-#define ntohll(x) bswap_64((x))
+// #define ntohll(x) bswap_64((x))
 #endif
-#define htonll(x) ntohll(x)
+// #define htonll(x) ntohll(x)
 
 extern const char *	nl_strerror_l(int err);
 

@@ -28,22 +28,22 @@
  *	IPv6 address structure
  */
 
-#if __UAPI_DEF_IN6_ADDR
-struct in6_addr {
-	union {
-		__u8		u6_addr8[16];
-#if __UAPI_DEF_IN6_ADDR_ALT
-		__be16		u6_addr16[8];
-		__be32		u6_addr32[4];
-#endif
-	} in6_u;
-// #define s6_addr			in6_u.u6_addr8
-#if __UAPI_DEF_IN6_ADDR_ALT
-#define s6_addr16		in6_u.u6_addr16
-#define s6_addr32		in6_u.u6_addr32
-#endif
-};
-#endif /* __UAPI_DEF_IN6_ADDR */
+// #if __UAPI_DEF_IN6_ADDR
+// struct in6_addr {
+// 	union {
+// 		__u8		u6_addr8[16];
+// #if __UAPI_DEF_IN6_ADDR_ALT
+// 		__be16		u6_addr16[8];
+// 		__be32		u6_addr32[4];
+// #endif
+// 	} in6_u;
+// // #define s6_addr			in6_u.u6_addr8
+// #if __UAPI_DEF_IN6_ADDR_ALT
+// #define s6_addr16		in6_u.u6_addr16
+// #define s6_addr32		in6_u.u6_addr32
+// #endif
+// };
+// #endif /* __UAPI_DEF_IN6_ADDR */
 
 // #if __UAPI_DEF_SOCKADDR_IN6
 // struct sockaddr_in6 {
@@ -248,7 +248,7 @@ struct in6_flowlabel_req {
 /*
  * Advanced API (RFC3542) (2)
  */
-#define IPV6_RECVTCLASS		66
+// #define IPV6_RECVTCLASS		66
 // #define IPV6_TCLASS		67
 
 /*
