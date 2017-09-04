@@ -37,7 +37,7 @@ struct in6_addr {
 		__be32		u6_addr32[4];
 #endif
 	} in6_u;
-#define s6_addr			in6_u.u6_addr8
+// #define s6_addr			in6_u.u6_addr8
 #if __UAPI_DEF_IN6_ADDR_ALT
 #define s6_addr16		in6_u.u6_addr16
 #define s6_addr32		in6_u.u6_addr32
@@ -45,25 +45,25 @@ struct in6_addr {
 };
 #endif /* __UAPI_DEF_IN6_ADDR */
 
-#if __UAPI_DEF_SOCKADDR_IN6
-struct sockaddr_in6 {
-	unsigned short int	sin6_family;    /* AF_INET6 */
-	__be16			sin6_port;      /* Transport layer port # */
-	__be32			sin6_flowinfo;  /* IPv6 flow information */
-	struct in6_addr		sin6_addr;      /* IPv6 address */
-	__u32			sin6_scope_id;  /* scope id (new in RFC2553) */
-};
-#endif /* __UAPI_DEF_SOCKADDR_IN6 */
+// #if __UAPI_DEF_SOCKADDR_IN6
+// struct sockaddr_in6 {
+// 	unsigned short int	sin6_family;    /* AF_INET6 */
+// 	__be16			sin6_port;      /* Transport layer port # */
+// 	__be32			sin6_flowinfo;  /* IPv6 flow information */
+// 	struct in6_addr		sin6_addr;      /* IPv6 address */
+// 	__u32			sin6_scope_id;  /* scope id (new in RFC2553) */
+// };
+// #endif /* __UAPI_DEF_SOCKADDR_IN6 */
 
-#if __UAPI_DEF_IPV6_MREQ
-struct ipv6_mreq {
-	/* IPv6 multicast address of group */
-	struct in6_addr ipv6mr_multiaddr;
+// #if __UAPI_DEF_IPV6_MREQ
+// struct ipv6_mreq {
+// 	/* IPv6 multicast address of group */
+// 	struct in6_addr ipv6mr_multiaddr;
 
-	/* local IPv6 address of interface */
-	int		ipv6mr_ifindex;
-};
-#endif /* __UAPI_DEF_IVP6_MREQ */
+// 	/* local IPv6 address of interface */
+// 	int		ipv6mr_ifindex;
+// };
+// #endif /* __UAPI_DEF_IVP6_MREQ */
 
 #define ipv6mr_acaddr	ipv6mr_multiaddr
 
@@ -151,21 +151,21 @@ struct in6_flowlabel_req {
  */
 #if __UAPI_DEF_IPV6_OPTIONS
 #define IPV6_ADDRFORM		1
-#define IPV6_2292PKTINFO	2
-#define IPV6_2292HOPOPTS	3
-#define IPV6_2292DSTOPTS	4
-#define IPV6_2292RTHDR		5
-#define IPV6_2292PKTOPTIONS	6
-#define IPV6_CHECKSUM		7
-#define IPV6_2292HOPLIMIT	8
+// #define IPV6_2292PKTINFO	2
+// #define IPV6_2292HOPOPTS	3
+// #define IPV6_2292DSTOPTS	4
+// #define IPV6_2292RTHDR		5
+// #define IPV6_2292PKTOPTIONS	6
+// #define IPV6_CHECKSUM		7
+// #define IPV6_2292HOPLIMIT	8
 #define IPV6_NEXTHOP		9
 #define IPV6_AUTHHDR		10	/* obsolete */
 #define IPV6_FLOWINFO		11
 
-#define IPV6_UNICAST_HOPS	16
-#define IPV6_MULTICAST_IF	17
-#define IPV6_MULTICAST_HOPS	18
-#define IPV6_MULTICAST_LOOP	19
+// #define IPV6_UNICAST_HOPS	16
+// #define IPV6_MULTICAST_IF	17
+// #define IPV6_MULTICAST_HOPS	18
+// #define IPV6_MULTICAST_LOOP	19
 #define IPV6_ADD_MEMBERSHIP	20
 #define IPV6_DROP_MEMBERSHIP	21
 #define IPV6_ROUTER_ALERT	22
@@ -194,7 +194,7 @@ struct in6_flowlabel_req {
 #define IPV6_FLOWLABEL_MGR	32
 #define IPV6_FLOWINFO_SEND	33
 
-#define IPV6_IPSEC_POLICY	34
+// #define IPV6_IPSEC_POLICY	34
 #define IPV6_XFRM_POLICY	35
 #endif
 
@@ -249,7 +249,7 @@ struct in6_flowlabel_req {
  * Advanced API (RFC3542) (2)
  */
 #define IPV6_RECVTCLASS		66
-#define IPV6_TCLASS		67
+// #define IPV6_TCLASS		67
 
 /*
  * Netfilter (2)

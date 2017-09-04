@@ -51,7 +51,7 @@
 #include <linux/ip_mp_alg.h>
 #include <linux/atm.h>
 #include <linux/ip.h>
-#include <netinet6/ipv6.h>
+#include <linux/ipv6.h>
 #include <linux/snmp.h>
 #include <linux/xfrm.h>
 
