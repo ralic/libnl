@@ -14,36 +14,34 @@
 # limitations under the License.
 **/
 
-#ifndef __FINK_ENDIANDEV_PKG_ENDIAN_H__
-#define __FINK_ENDIANDEV_PKG_ENDIAN_H__ 1
+#include <sys/types.h>
+#define __u64 uint64_t
+#define __s64 int64_t
+#define __u32 uint32_t
+#define __s32 int32_t
+#define __u16 uint16_t
+typedef int32_t __s32;
+typedef uint32_t __u32;
+typedef uint8_t __u8;
+typedef uint16_t __u16;
 
-/** compatibility header for endian.h
- * This is a simple compatibility shim to convert
- * BSD/Linux endian macros to the Mac OS X equivalents.
- * It is public domain.
- * */
+#ifdef __CHECKER__
+#define __bitwise__ __attribute__((bitwise))
+#else
+#define __bitwise__
+#endif
+#ifdef __CHECK_ENDIAN__
+#define __bitwise __bitwise__
+#else
+#define __bitwise
+#endif
 
-#ifndef __APPLE__
-	#warning "This header file (endian.h) is MacOS X specific.\n"
-#endif	/* __APPLE__ */
+typedef __u16 __bitwise __le16;
+typedef __u16 __bitwise __be16;
+typedef __u32 __bitwise __le32;
+typedef __u32 __bitwise __be32;
+typedef __u64 __bitwise __le64;
+typedef __u64 __bitwise __be64;
 
-
-#include <libkern/OSByteOrder.h>
-
-#define htobe16(x) OSSwapHostToBigInt16(x)
-#define htole16(x) OSSwapHostToLittleInt16(x)
-#define be16toh(x) OSSwapBigToHostInt16(x)
-#define le16toh(x) OSSwapLittleToHostInt16(x)
-
-#define htobe32(x) OSSwapHostToBigInt32(x)
-#define htole32(x) OSSwapHostToLittleInt32(x)
-#define be32toh(x) OSSwapBigToHostInt32(x)
-#define le32toh(x) OSSwapLittleToHostInt32(x)
-
-#define htobe64(x) OSSwapHostToBigInt64(x)
-#define htole64(x) OSSwapHostToLittleInt64(x)
-#define be64toh(x) OSSwapBigToHostInt64(x)
-#define le64toh(x) OSSwapLittleToHostInt64(x)
-
-
-#endif	/* __FINK_ENDIANDEV_PKG_ENDIAN_H__ */
+typedef __u16 __bitwise __sum16;
+typedef __u32 __bitwise __wsum;

@@ -172,7 +172,7 @@ struct in6_flowlabel_req {
 #define IPV6_MTU_DISCOVER	23
 #define IPV6_MTU		24
 #define IPV6_RECVERR		25
-#define IPV6_V6ONLY		26
+// #define IPV6_V6ONLY		26
 #define IPV6_JOIN_ANYCAST	27
 #define IPV6_LEAVE_ANYCAST	28
 
